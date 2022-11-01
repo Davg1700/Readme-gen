@@ -9,6 +9,12 @@ const questions = [
         type: 'input',
         message: 'What is the name of your app?',
         name: 'appName',
+        validate: input => {
+            if(input.trim() === ""){
+                return "Not valid"
+            }
+            return true
+        }
     },
     {
         type: 'input',
@@ -66,16 +72,18 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('ReadMe Created Successfully')
+        err ? console.error(err) : console.log('Created!')
     );
 }
 
+
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.promt(questions)
-    .then(function (data) {
-        writeToFile('Readme.md', generateMarkdown(data));
-    })
+    inquirer
+        .prompt(questions)
+        .then(function (data) {
+            writeToFile("./read-me-folder/README.md", generateMarkdown(data))
+        })
 }
 
 // Function call to initialize app
