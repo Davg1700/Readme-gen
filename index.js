@@ -8,7 +8,7 @@ const questions = [
     {
         type: 'input',
         message: 'What is the name of your app?',
-        name: 'appName',
+        name: 'name',
         validate: input => {
             if(input.trim() === ""){
                 return "Not valid"
@@ -63,7 +63,7 @@ const questions = [
     {
         type: 'list',
         message: 'What license are you using?',
-        name: 'appLicense',
+        name: 'license',
         choices: ['Apache-2.0', 'BSD-3', 'GPL', 'LGPL', 'MIT', 'MPL-2.0', 'CDDL-1.0', 'EPL-2.0', 'N/A']
     },
     {

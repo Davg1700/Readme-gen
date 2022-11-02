@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// // TODO: Create a function that returns a license badge based on which license is passed in
+
 function renderLicenseBadge(license) {
   if(license === 'Apache-2.0') {
     return `![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue)`
@@ -22,8 +22,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// // TODO: Create a function that returns the license link
 function renderLicenseLink(license) {
   if(license === 'Apache-2.0') {
     return `(https://opensource.org/licenses/Apache-2.0)`
@@ -46,8 +45,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// // TODO: Create a function that returns the license section of README
 function renderLicenseSection(license) {
   if(!license){
     return '';
@@ -55,31 +53,31 @@ function renderLicenseSection(license) {
   return ` ## Liscense`
 }
 
-// TODO: Create a function to generate markdown for README
+// // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.name} ${renderLicenseBadge(data.appLicense)}
-  ## Description
-  ${data.appDesc}
-  ## Table of Contents
-    * [Installation Instructions](#installation-instructions)
-    * [Usage](#usage)
-    * [Contribution Guidelines](#contribution-guidelines)
-    * [Testing Instructions](#testing-instructions)
-    * [Questions](#questions)
-    * [Licenses](#licenses)
-  ## Installation Instructions
-  ${data.appInstall}
-  ## Usage
-  ${data.appUsage}
-  ## Contribution Guidelines
-  ${data.appContribute}
-  ## Testing Instructions
-  ${data.appTesting}
-  ## Questions
-    * You can view my GitHub profile [Here](https://github.com/${data.appGitHub})
-    * For additonal questions you can send me an [email](mailto:${data.appEmail})
-  ${renderLicenseSection(renderLicenseLink(data.appLicense))}
-  `;
-  }
-  
-  module.exports = generateMarkdown;
+  return `# ${data.name} ${renderLicenseBadge(data.license)}
+## Description
+${data.description}
+## Table of Contents
+  * [Installation Instructions](#installation-instructions)
+  * [Usage](#usage)
+  * [Contribution Guidelines](#contribution-guidelines)
+  * [Testing Instructions](#testing-instructions)
+  * [Questions](#questions)
+  * [Licenses](#licenses)
+## Installation Instructions
+${data.install}
+## Usage
+${data.usage}
+## Contribution Guidelines
+${data.contributes}
+## Testing Instructions
+${data.test}
+## Questions
+  * You can view my GitHub profile [Here](https://github.com/${data.gitHub})
+  * For additonal questions you can send me an [email](mailto:${data.email})
+${renderLicenseSection(renderLicenseLink(data.license))}
+`;
+}
+
+module.exports = generateMarkdown;
