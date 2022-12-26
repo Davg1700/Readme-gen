@@ -1,6 +1,6 @@
-# test ![License: LGPL](https://img.shields.io/badge/License-LGPL-blue)
+# SQL Employe Traker 
 ## Description
-test
+allows managers to an easier way to view  copmany data base
 ## Table of Contents
   * [Installation Instructions](#installation-instructions)
   * [Usage](#usage)
@@ -9,14 +9,14 @@ test
   * [Questions](#questions)
   * [Licenses](#licenses)
 ## Installation Instructions
-test
+npm i, soucre schea & seeds node index
 ## Usage
-test
+allow users to added items to comany data base such as new department/employess
 ## Contribution Guidelines
 undefined
 ## Testing Instructions
-test
+N/a
 ## Questions
-  * You can view my GitHub profile [Here](https://github.com/test)
-  * For additonal questions you can send me an [email](mailto:test)
- ## Liscense
+  * You can view my GitHub profile [Here](https://github.com/davg1700)
+  * For additonal questions you can send me an [email](mailto:N/a)
+
